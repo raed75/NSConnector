@@ -26,3 +26,4 @@ C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.csproj.App.config
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.dll
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.pdb
+C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.csprojResolveAssemblyReference.cache

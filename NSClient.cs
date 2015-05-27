@@ -106,7 +106,7 @@ namespace NSConnector
             return response;
 
         }
-
+       // Init
         private static HttpWebRequest InitNSRequest<T>(NSRequest<T> request, string methodType) where T : NSRootEntity
         {
 
