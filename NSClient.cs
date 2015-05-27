@@ -26,7 +26,6 @@ namespace NSConnector
 
             HttpWebRequest httpWReq = InitNSRequest(request, "GET");
 
-
             NSResponse<T> response = new NSResponse<T>();
 
             try
