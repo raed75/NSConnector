@@ -7,12 +7,12 @@ using Newtonsoft.Json;
 
 namespace NSConnector.Models
 {
-    public abstract class NSRootEntity
+    public abstract class NSEntity
     {
 
         private string _recordType;
         
-        protected NSRootEntity(string recordType)
+        protected NSEntity(string recordType)
         {
             _recordType = recordType;
         }

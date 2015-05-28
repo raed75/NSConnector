@@ -59,14 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracts\INSEntityRepository.cs" />
     <Compile Include="Models\NSCustomer.cs" />
-    <Compile Include="Models\NSRootEntity.cs" />
+    <Compile Include="Models\NSEntity.cs" />
     <Compile Include="Models\NSError.cs" />
     <Compile Include="Models\NSResponse.cs" />
     <Compile Include="Models\NSAuth.cs" />
+    <Compile Include="NSCaller.cs" />
     <Compile Include="NSClient.cs" />
     <Compile Include="Models\NSRequest.cs" />
+    <Compile Include="NSRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\NSCustomerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

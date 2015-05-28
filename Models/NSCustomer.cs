@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 namespace NSConnector.Models 
 {
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
-    public class NSCustomer : NSRootEntity
+    public class NSCustomer : NSEntity
     {
         public NSCustomer() : base("customer") {}
         
@@ -24,14 +24,11 @@ namespace NSConnector.Models
         [JsonIgnore()]
         public string FullName { get { return String.Format("{0} {1}", FirstName, LastName); } }
 
-        [JsonProperty(PropertyName = "defaultaddress")]
+        [JsonProperty(PropertyName = "address")]
         public string FullAddress { get; set; }
 
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
-
-        [JsonProperty(PropertyName = "addressee")]
-        public string Addressee { get; set; }
 
         [JsonProperty(PropertyName = "address1")]
         public string Address1 { get; set; }
@@ -57,11 +54,8 @@ namespace NSConnector.Models
         [JsonProperty(PropertyName = "custentity_fac_fl")]
         public bool IsFacilitator { get; set; }
 
-        [JsonProperty(PropertyName = "subsidiary")]
-        public object Subsidiary { get; set; }
-
-        [JsonProperty(PropertyName = "companyname")]
-        public string CompanyName { get; set; }
+        [JsonProperty(PropertyName = "isinactive")]
+        public bool IsInactive { get; set; }
 
     }
 

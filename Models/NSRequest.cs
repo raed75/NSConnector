@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Specialized;
 
 namespace NSConnector.Models
 {
-    public class NSRequest<T> where T : NSRootEntity
+    public class NSRequest<T> where T : NSEntity
     {
         private NSAuth nsAuth;
         
@@ -27,5 +28,6 @@ namespace NSConnector.Models
         public int DeployID { get; set; }
         public NSAuth NSAuth { get { return nsAuth; } }
         public T NSEntity { get; set; }
+        public NameValueCollection RequestParameters { get; set; }
     }
 }

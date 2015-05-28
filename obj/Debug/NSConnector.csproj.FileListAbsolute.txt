@@ -12,6 +12,7 @@ C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSWrapper\b
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSWrapper\bin\Debug\NSConnector.pdb
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSWrapper\obj\Debug\NSConnector.dll
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSWrapper\obj\Debug\NSConnector.pdb
+C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.csproj.App.config
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\bin\Debug\NSConnector.dll.config
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\bin\Debug\NSConnector.dll
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\bin\Debug\NSConnector.pdb
@@ -23,7 +24,6 @@ C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.csproj.App.config
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.dll
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.pdb
 C:\Users\raedlocal\Documents\Visual Studio 2013\Projects\NSClientApp\NSConnector\obj\Debug\NSConnector.csprojResolveAssemblyReference.cache

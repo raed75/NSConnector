@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 namespace NSConnector.Models
 {
 
-    public class NSResponse<T> where T : NSRootEntity
+    public class NSResponse<T> where T : NSEntity
     {
 
         public T NSEntity { get; set; }
