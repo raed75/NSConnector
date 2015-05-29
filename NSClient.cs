@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using NSConnector.Models;
 using Newtonsoft.Json.Linq;
 using NSConnector.Abstracts;
+using NSConnector.EntityMappers;
 
 namespace NSConnector
 {
@@ -20,9 +21,9 @@ namespace NSConnector
     {
        
         // GET Async
-        public static async Task<NSResponse<T>> GetAsync<T>(NSRequest<T> request) where T : NSEntity
+        public static async Task<NSResponse> GetAsync<T>(NSRequest<T> request) where T : NSEntity
         {
-            NSResponse<T> response = new NSResponse<T>();
+            NSResponse response = new NSResponse();
             
             NSCaller nsCaller = new NSCaller(request.Url,
                 request.NSAuth.AccountID.ToString(),
@@ -48,9 +49,9 @@ namespace NSConnector
             }
             else
             {
-                INSEntityRepository<T> repository = NSRepositoryFactory.GetNSRepositoryFactory().GetRepository<T>();
-                T entity = repository.GetEntity(jsonObject);
-                response.NSEntity = entity;
+                NSMapperFactory mapperFactory = NSMapperFactory.GetNSMapperFactory();
+                INSEntityMapper mapper = mapperFactory.GetMapper(typeof(T));
+                response.Entity = mapper.MapToEntity(jsonObject);
             }
             
             return response;
@@ -58,10 +59,10 @@ namespace NSConnector
         }
 
         // POST Async
-        public static async Task<NSResponse<T>> PostAsync<T>(NSRequest<T> request) where T : NSEntity
+        public static async Task<NSResponse> PostAsync<T>(NSRequest<T> request) where T : NSEntity
         {
 
-            NSResponse<T> response = new NSResponse<T>();
+            NSResponse response = new NSResponse();
             
             NSCaller nsCaller = new NSCaller(request.Url,
                 request.NSAuth.AccountID.ToString(),
@@ -83,10 +84,15 @@ namespace NSConnector
                     Code = (string)error["code"],
                     Message = (string)error["message"]
                 };
-                        
+            else
+            {
+                NSMapperFactory mapperFactory = NSMapperFactory.GetNSMapperFactory();
+                INSEntityMapper mapper = mapperFactory.GetMapper(typeof(T));
+                response.Entity = mapper.MapToEntity(jsonObject);
+            }            
             return response;
 
         }
-               
-    }
+        
+        }
 }

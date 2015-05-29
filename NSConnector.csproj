@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstracts\INSEntityRepository.cs" />
+    <Compile Include="Abstracts\INSEntityMapper.cs" />
     <Compile Include="Models\NSCustomer.cs" />
     <Compile Include="Models\NSEntity.cs" />
     <Compile Include="Models\NSError.cs" />
@@ -68,9 +68,9 @@
     <Compile Include="NSCaller.cs" />
     <Compile Include="NSClient.cs" />
     <Compile Include="Models\NSRequest.cs" />
-    <Compile Include="NSRepositoryFactory.cs" />
+    <Compile Include="NSMapperFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\NSCustomerRepository.cs" />
+    <Compile Include="EntityMappers\NSCustomerMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
