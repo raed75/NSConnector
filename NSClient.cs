@@ -21,9 +21,9 @@ namespace NSConnector
     {
        
         // GET Async
-        public static async Task<NSResponse> GetAsync<T>(NSRequest<T> request) where T : NSEntity
+        public static async Task<NSResponse<T>> GetAsync<T>(NSRequest<T> request) where T : NSEntity
         {
-            NSResponse response = new NSResponse();
+            NSResponse<T> response = new NSResponse<T>();
             
             NSCaller nsCaller = new NSCaller(request.Url,
                 request.NSAuth.AccountID.ToString(),
@@ -50,8 +50,8 @@ namespace NSConnector
             else
             {
                 NSMapperFactory mapperFactory = NSMapperFactory.GetNSMapperFactory();
-                INSEntityMapper mapper = mapperFactory.GetMapper(typeof(T));
-                response.Entity = mapper.MapToEntity(jsonObject);
+                INSEntityMapper<NSEntity> mapper = mapperFactory.GetMapper(typeof(T));
+                response.Entity = (T)mapper.MapToEntity(jsonObject);
             }
             
             return response;
@@ -59,10 +59,10 @@ namespace NSConnector
         }
 
         // POST Async
-        public static async Task<NSResponse> PostAsync<T>(NSRequest<T> request) where T : NSEntity
+        public static async Task<NSResponse<T>> PostAsync<T>(NSRequest<T> request) where T : NSEntity
         {
 
-            NSResponse response = new NSResponse();
+            NSResponse<T> response = new NSResponse<T>();
             
             NSCaller nsCaller = new NSCaller(request.Url,
                 request.NSAuth.AccountID.ToString(),
@@ -87,8 +87,8 @@ namespace NSConnector
             else
             {
                 NSMapperFactory mapperFactory = NSMapperFactory.GetNSMapperFactory();
-                INSEntityMapper mapper = mapperFactory.GetMapper(typeof(T));
-                response.Entity = mapper.MapToEntity(jsonObject);
+                INSEntityMapper<NSEntity> mapper = mapperFactory.GetMapper(typeof(T));
+                response.Entity = (T)mapper.MapToEntity(jsonObject);
             }            
             return response;
 

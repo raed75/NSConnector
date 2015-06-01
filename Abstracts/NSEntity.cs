@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace NSConnector.Models
+namespace NSConnector.Abstracts
 {
+
+    
     public abstract class NSEntity
     {
 
@@ -17,8 +19,8 @@ namespace NSConnector.Models
             _recordType = recordType;
         }
         
-        [JsonProperty(PropertyName = "id")]
-        public int ID { get; set; }
+        [JsonProperty(PropertyName = "internalid")]
+        public int InternalID { get; set; }
 
         [JsonProperty(PropertyName = "entityid")]
         public string EntityID { get; set; }

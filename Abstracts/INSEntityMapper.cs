@@ -8,8 +8,13 @@ using Newtonsoft.Json.Linq;
 
 namespace NSConnector.Abstracts
 {
-    public interface INSEntityMapper
+    //public interface INSEntityMapper
+    //{
+    //    NSEntity MapToEntity(JToken jsonEntityObject);
+    //}
+
+    public interface INSEntityMapper<out T> where T:NSEntity
     {
-        NSEntity MapToEntity(JToken jsonEntityObject);
+        T MapToEntity(JToken jsonObject);
     }
 }

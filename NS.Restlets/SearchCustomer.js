@@ -5,7 +5,6 @@
 
     // Define search columns
     var columnNames = [
-        'id',
         'entityid',
         'firstname',
         'lastname',
@@ -33,5 +32,5 @@
     // defined in the filtersand columnsarrays.
     var searchResults = nlapiSearchRecord('customer', null, filters, columns);
 
-    return searchResults[0];
+    return searchResults;
 }

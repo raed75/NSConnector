@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Specialized;
+using NSConnector.Models;
 
-namespace NSConnector.Models
+namespace NSConnector.Abstracts
 {
     public class NSRequest<T> where T : NSEntity
     {

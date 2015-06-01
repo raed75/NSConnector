@@ -60,14 +60,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstracts\INSEntityMapper.cs" />
+    <Compile Include="Models\NSExchangeRate.cs" />
     <Compile Include="Models\NSCustomer.cs" />
-    <Compile Include="Models\NSEntity.cs" />
+    <Compile Include="Abstracts\NSEntity.cs" />
     <Compile Include="Models\NSError.cs" />
-    <Compile Include="Models\NSResponse.cs" />
+    <Compile Include="Abstracts\NSResponse.cs" />
     <Compile Include="Models\NSAuth.cs" />
     <Compile Include="NSCaller.cs" />
     <Compile Include="NSClient.cs" />
-    <Compile Include="Models\NSRequest.cs" />
+    <Compile Include="Abstracts\NSRequest.cs" />
     <Compile Include="NSMapperFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EntityMappers\NSCustomerMapper.cs" />
@@ -77,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NS.Restlets\SearchCustomer.js" />
-    <Content Include="NS.Restlets\RecordsRestlet.js" />
+    <Content Include="NS.Restlets\customer_service_restlet.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

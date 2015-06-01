@@ -20,13 +20,15 @@ namespace NSConnector
             return _instance;
         }
 
-        public INSEntityMapper GetMapper(Type entityType)
+        public INSEntityMapper<NSEntity> GetMapper(Type entityType)
         {
-            INSEntityMapper mapper = null;
 
-            if (entityType == typeof(NSCustomer))
-                mapper = new NSCustomerMapper();
-
+            INSEntityMapper<NSEntity> mapper;
+            
+             if (entityType == typeof(NSCustomer))
+               mapper = new NSCustomerMapper();
+            else
+                mapper = null;
             return mapper;
         }
   

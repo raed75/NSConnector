@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using NSConnector.Abstracts;
+using System.Data.Common;
 
 namespace NSConnector.Models 
 {
@@ -21,29 +23,11 @@ namespace NSConnector.Models
         [JsonProperty(PropertyName = "lastname")]
         public string LastName { get; set; }
 
-        [JsonIgnore()]
+        [JsonProperty(PropertyName = "custentitybirth_data")]
+        public string DateOfBirth { get; set; }
+
+        [JsonIgnore]
         public string FullName { get { return String.Format("{0} {1}", FirstName, LastName); } }
-
-        [JsonProperty(PropertyName = "address")]
-        public string FullAddress { get; set; }
-
-        [JsonProperty(PropertyName = "country")]
-        public string Country { get; set; }
-
-        [JsonProperty(PropertyName = "address1")]
-        public string Address1 { get; set; }
-
-        [JsonProperty(PropertyName = "address2")]
-        public string Address2 { get; set; }
-
-        [JsonProperty(PropertyName = "city")]
-        public string City { get; set; }
-
-        [JsonProperty(PropertyName = "state")]
-        public string State { get; set; }
-
-        [JsonProperty(PropertyName = "zipcode")]
-        public string ZipCode { get; set; }
 
         [JsonProperty(PropertyName = "mobilephone")]
         public string MobilePhone { get; set; }
@@ -52,11 +36,38 @@ namespace NSConnector.Models
         public string HomePhone { get; set; }
 
         [JsonProperty(PropertyName = "custentity_fac_fl")]
-        public bool IsFacilitator { get; set; }
+        public string IsFacilitator { get; set; }
 
         [JsonProperty(PropertyName = "isinactive")]
-        public bool IsInactive { get; set; }
+        public string IsInactive { get; set; }
 
+        [JsonProperty(PropertyName = "subsidiary")]
+        public int Subsidiary { get; set; }
+
+        [JsonProperty(PropertyName = "addressbook")]
+        public NSAddressBook AddressBook { get; set; }
+
+    }
+
+    [JsonObject("addressbook")]
+    public class NSAddressBook
+    {
+        [JsonProperty("country")]
+        public string Country { get; set; }
+        [JsonProperty("state")]
+        public string State { get; set; }
+        [JsonProperty("city")]
+        public string City { get; set; }
+        [JsonProperty("addr1")]
+        public string Address1 { get; set; }
+        [JsonProperty("addr2")]
+        public string Address2 { get; set; }
+        [JsonProperty("zip")]
+        public string Zip { get; set; }
+        [JsonProperty("addrphone")]
+        public string AddressPhone { get; set; }
+        [JsonProperty("isresidential")]
+        public string IsResidential { get; set; }
     }
 
 }
